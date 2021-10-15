@@ -10,8 +10,11 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+        "firebase/php-jwt": "^5.4",
+        "guzzlehttp/guzzle": "^7.3",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

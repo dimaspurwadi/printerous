@@ -14,5 +14,39 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    return 'halo';
+});
+
+$router->get('/category', [
+    'as' => 'api.getCategory',
+    'uses' => 'CategoryController@index',
+    'middleware' => 'jwt.verify',
+]);
+$router->group(['prefix' => 'product'], function () use ($router) {
+    $router->get('/', [
+        'as' => 'api.getProduct',
+        'uses' => 'ProductController@index',
+        'middleware' => 'jwt.verify',
+    ]);
+    $router->get('/{id}', [
+        'as' => 'api.DetailProduct',
+        'uses' => 'ProductController@detail',
+        'middleware' => 'jwt.verify',
+    ]);
+    
+    $router->post('/store', [
+        'as' => 'api.storeProduct',
+        'uses' => 'ProductController@store',
+        'middleware' => 'jwt.verify',
+    ]);
+    $router->get('/view_delete', [
+        'as' => 'api.viewDelProduct',
+        'uses' => 'ProductController@view_delete',
+        'middleware' => 'jwt.verify',
+    ]);
+    $router->delete('/delete/{id}', [
+        'as' => 'api.delProduct',
+        'uses' => 'ProductController@delete',
+        'middleware' => 'jwt.verify',
+    ]);
 });

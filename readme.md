@@ -1,11 +1,32 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+- Clone Project
+- cd to Project
+- composer install
+- cp .env.example .env
+- setting env sesuai kebutuhan
+- php artisan key:generate
+- php artisan migrate
+- php artisan db:seed
+- login admin  
+  username = admin@printerous.com
+  password = admin
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+- login account manager  
+  username = am@abc.com
+  password = admin
+
+  username = am@bcd.com
+  password = admin
+
+- Petunjuk penggunaan Admin
+  - Admin login
+  - Masukkan Data Organisasi
+  - Masukkan Data User Account Manager lalu assign data organisasi
+
+- Petunjuk penggunaan Account Manager
+  - account manager login
+  - Manage Data Organisasi
+  - Manage Data PIC
+  
 
 ## About Laravel
 
